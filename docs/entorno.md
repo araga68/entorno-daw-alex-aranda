@@ -36,20 +36,26 @@ v24.22.1
 
 ¿Qué líneas nuevas han aparecido en `devcontainer.json`? Explica con tus palabras qué hace cada una:
 
-> 
+>  "ghcr.io/devcontainers/features/java:1": {},
+    "ghcr.io/devcontainers/features/node:2": {},
+
+    Instala Java en el contenedor para poder ejecutar programas Java y utilizar herramientas de desarrollo relacionadas y instala Node, que permite ejecutar JavaScript fuera del navegador y utilizar herramientas como npm para gestionar paquetes.
 
 ### 1.3. Comparativa de los dos IDE (paso 6)
 
 |                                         | Editor de GitHub Codespaces | JupyterLab |
 |-----------------------------------------|-----------------------------|------------|
-| ¿Libre o propietario?                   |                             |            |
-| Licencia / empresa o comunidad          |                             |            |
-| ¿Tiene coste? ¿Con qué límites?         |                             |            |
-| ¿Se puede usar fuera de GitHub?         |                             |            |
+| ¿Libre o propietario?                   |                        github es propietario y JupyterLab libre.
+
+| Licencia / empresa o comunidad          |                             |       github es empresa (Microsoft) y JupyterLab comunidad.   
+| ¿Tiene coste? ¿Con qué límites?         |                             |         La diferencia principal es que GitHub Codespaces cobra por los recursos que utilizas, mientras que JupyterLab es gratuito como software, aunque el servidor donde lo ejecutes puede tener un coste.
+
+| ¿Se puede usar fuera de GitHub?         |                             |          GitHub Codespaces no como servicio independiente y jupiterLab si.
+
 | Lo que más me ha gustado                |                             |            |
 | Lo que menos me ha gustado              |                             |            |
 | ¿Para qué tipo de trabajo lo elegiría?  |                             |            |
-
+Para desarrollar aplicaciones web, Java o Node.js en un entorno en la nube.
 ---
 
 ## 2. Módulos y extensiones (CE 2.b)
@@ -61,7 +67,9 @@ v24.22.1
 
 ¿Qué diferencia hay entre instalar una extensión **solo desde el panel** y añadirla **también a `devcontainer.json`**?
 
-> 
+> Instalar una extensión solo desde el panel de Visual Studio Code: se instala manualmente en tu entorno actual. Si creas otro contenedor o Codespace, puede que tengas que instalarla de nuevo.
+
+Añadirla también a devcontainer.json: la instalación queda declarada en la configuración del proyecto y se instala automáticamente al crear el entorno de desarrollo.
 
 ---
 
@@ -130,7 +138,11 @@ pega aquí
 Resultado de `npm outdated` (paso 17):
 
 ```
-pega aquí
+     Depended by
+@types/lodash  4.14.202  4.14.202  4.17.27  node_modules/@types/lodash  entorno-daw-alex-aranda
+@types/node    20.11.30  20.11.30   26.6.5  node_modules/@types/node    entorno-daw-alex-aranda
+lodash          4.17.20   4.17.20   4.18.1  node_modules/lodash         entorno-daw-alex-aranda
+typescript        5.4.5     5.4.5    7.0.2  node_modules/typescript     entorno-daw-alex-aranda
 ```
 
 Resultado de `npm audit` **antes** de actualizar lodash (solo el resumen final):
@@ -142,7 +154,15 @@ pega aquí
 Resultado de `npm audit` **después**:
 
 ```
-pega aquí
+it` functions - https://github.com/advisories/GHSA-xxjr-mmjv-4gpg
+fix available via `npm audit fix --force`
+Will install lodash@4.18.1, which is outside the stated dependency range
+node_modules/lodash
+
+1 high severity vulnerability
+
+To address all issues, run:
+  npm audit fix --force
 ```
 
 **Mi política de actualizaciones**: si este entorno lo usara un equipo de 5 personas durante todo el curso, ¿qué dejarías en automático y qué fijarías a mano? Justifícalo.
@@ -161,4 +181,4 @@ Anota cualquier problema que hayas tenido y cómo lo resolviste (también si usa
 
 ¿Qué ventaja tiene describir el entorno «como código» frente a instalar cada programa a mano en tu ordenador? Piensa en un equipo con Mac y Windows.
 
-> 
+> La ventaja es que todos tenemos el mismo entorno de desarrollo, aunque usemos Mac o Windows, sin tener que instalar los programas uno por uno. Así ahorramos tiempo y evitamos problemas de compatibilidad.
