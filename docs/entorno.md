@@ -1,6 +1,6 @@
 # Documentación de mi entorno de desarrollo · Práctica 2
 
-**Nombre y apellidos:**
+**Alejandro Aranda Aguilar:**
 **URL de mi repositorio:**
 
 > Rellena cada apartado a medida que avanzas. Donde pone «pega aquí», copia el texto
@@ -16,7 +16,9 @@
 Resultado de `java -version` y `node -v` **antes** de instalar nada:
 
 ```
-pega aquí
+openjdk version "27" 2026-09-15
+OpenJDK Runtime Environment Temurin-27+35 (build 27+35)
+OpenJDK 64-Bit Server VM Temurin-27+35 (build 27+35, mixed mode, sharing)
 ```
 
 ¿Por qué crees que aparece ese mensaje? (relaciónalo con la diapositiva «Problemas habituales del entorno»)
@@ -28,7 +30,8 @@ pega aquí
 Resultado de `java -version`, `node -v` y `jupyter lab --version` **después**:
 
 ```
-pega aquí
+v24.22.1
+4.6.4
 ```
 
 ¿Qué líneas nuevas han aparecido en `devcontainer.json`? Explica con tus palabras qué hace cada una:
@@ -87,7 +90,14 @@ pega aquí el contenido de .vscode/settings.json
 Salida completa de la tarea **Build completo** (paso 15):
 
 ```
-pega aquí
+=== FACTURA generada con Java 25.0.4.1 ===
+Dominio web anual              12.00 EUR
+Alojamiento web                59.90 EUR
+Logotipo corporativo          150.00 EUR
+-----------------------------------------
+Base imponible                221.90 EUR
+IVA (21 %)                     46.60 EUR
+TOTAL                         268.50 EUR
 ```
 
 | Lenguaje | Archivo fuente | Herramienta que lo traduce | Archivo generado | Cómo se ejecuta |
